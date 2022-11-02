@@ -9,13 +9,16 @@ module.exports = {
     'standard-with-typescript',
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
+    'plugin:sort/recommended',
   ],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module',
     project: ['./tsconfig.json'],
+    sourceType: 'module',
   },
-  plugins: ['react', 'jsx-a11y', 'prettier'],
-  rules: {},
+  plugins: ['react', 'jsx-a11y', 'prettier', 'sort', 'sort-keys-fix'],
+  rules: {
+    'sort-keys-fix/sort-keys-fix': 'warn',
+  },
 };
